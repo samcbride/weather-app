@@ -19,7 +19,7 @@ const ForecastSummary = (props) => {
 export default ForecastSummary;
 
 ForecastSummary.propTypes = {
-  date: PropTypes.string.isRequired,
+  date: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   temperature: PropTypes.shape({

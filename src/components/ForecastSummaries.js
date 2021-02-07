@@ -2,37 +2,32 @@ import React from "react";
 import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
 
-const ForecastSummaries = ({ forecasts }) => {
-  const { date, temperature, description, icon } = forecasts;
-  return (
-    <div className="ForecastSummary">
+const ForecastSummaries = ({ forecasts }) => (
+  <div className="forecast-summaries">
+    {forecasts.map((forecast) => (
       <ForecastSummary
-        date={date}
-        temperature={temperature}
-        description={description}
-        icon={icon}
+        key={forecast.date}
+        date={forecast.date}
+        description={forecast.description}
+        icon={forecast.icon}
+        temperature={forecast.temperature}
       />
-    </div>
-  );
-};
+    ))}
+  </div>
+);
+
+export default ForecastSummaries;
 
 ForecastSummaries.propTypes = {
-  forecasts: PropTypes.shape([
-    {
+  forecasts: PropTypes.arrayOf(
+    PropTypes.shape({
       date: PropTypes.number,
+      description: PropTypes.string,
+      icon: PropTypes.string,
       temperature: PropTypes.shape({
         max: PropTypes.number,
         min: PropTypes.number,
-      }).isRequired,
-      wind: PropTypes.shape({
-        speed: PropTypes.number,
-        direction: PropTypes.string,
-      }).isRequired,
-      humidity: PropTypes.number,
-      description: PropTypes.string,
-      icon: PropTypes.string,
-    },
-  ]).isRequired,
+      }),
+    })
+  ).isRequired,
 };
-
-export default ForecastSummaries;
