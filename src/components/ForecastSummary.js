@@ -6,7 +6,7 @@ import moment from "moment";
 const ForecastSummary = (props) => {
   const { date, description, icon, temperature } = props;
   return (
-    <div className="forecast-summary">
+    <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">
         {moment(date).format("ddd do MMM")}
       </div>
