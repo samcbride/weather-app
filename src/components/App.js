@@ -3,12 +3,14 @@ import "../styles/App.css";
 import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
+import ForecastDetails from "./ForecastDetails";
 
 const App = ({ location, forecasts }) => {
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries forecasts={forecasts} />
+      <ForecastDetails forecast={forecasts[0]} />
     </div>
   );
 };
@@ -29,6 +31,18 @@ App.propTypes = {
       }),
     })
   ).isRequired,
+  // forecast: PropTypes.shape({
+  //   date: PropTypes.number.isRequired,
+  //   temperature: PropTypes.shape({
+  //     max: PropTypes.number,
+  //     min: PropTypes.number,
+  //   }).isRequired,
+  //   humidity: PropTypes.number.isRequired,
+  //   wind: PropTypes.shape({
+  //     speed: PropTypes.number,
+  //     direction: PropTypes.string,
+  //   }).isRequired,
+  // }).isRequired,
 };
 
 export default App;
