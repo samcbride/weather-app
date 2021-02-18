@@ -20,6 +20,16 @@ describe("SearchForm", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-});
 
-// describe("")
+  it("check button exists with correct text", () => {
+    const { getByRole } = render(
+      <SearchForm
+        searchText={validProps.searchText}
+        setSearchText={validProps.setSearchText}
+        onSubmit={validProps.onSubmit}
+      />
+    );
+    const button = getByRole("button", { name: /Search/i });
+    expect(button).toBeInTheDocument();
+  });
+});
