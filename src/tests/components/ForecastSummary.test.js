@@ -38,7 +38,7 @@ describe("ForecastSummary", () => {
       />
     );
 
-    expect(getByText("Thu 4th Jan")).toHaveClass("forecast-summary__date");
+    expect(getByText("Thu 1st Jan")).toHaveClass("forecast-summary__date");
     expect(getByText("Stub description")).toHaveClass(
       "forecast-summary__description"
     );
