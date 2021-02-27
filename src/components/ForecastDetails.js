@@ -7,7 +7,7 @@ const ForecastDetails = ({ forecast }) => {
   return (
     <div className="forecast-details" data-testid="forecast-details">
       <div className="forecast-details__date">
-        {moment(date).format("ddd do MMM")}
+        {moment(date).format("ddd Do MMM")}
       </div>
       <div className="forecast-details__max-temperature">
         Max Temperature:
