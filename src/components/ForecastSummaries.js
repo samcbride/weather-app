@@ -9,9 +9,9 @@ const ForecastSummaries = ({ forecasts, onForecastSelect }) => (
       <ForecastSummary
         key={forecast.date}
         date={forecast.date}
-        description={forecast.description}
         icon={forecast.icon.toString()}
         temperature={forecast.temperature}
+        description={forecast.description}
         onSelect={onForecastSelect}
       />
     ))}

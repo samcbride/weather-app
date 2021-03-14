@@ -1,0 +1,26 @@
+.forecast-summary {
+  border: 2px solid black;
+  border-radius: 3%;
+  padding: 1em;
+  box-shadow: 5px 10px #b27092;
+}
+
+.forecast-summary__date {
+  font-size: 20px;
+}
+
+.forecast-summary__icon {
+  font-size: 50px;
+}
+
+.forecast-summary__temperature {
+}
+
+.forecast-summary__description {
+}
+
+button {
+  background-color: #f0effb;
+  border-radius: 10%;
+  padding: 0.25em;
+}

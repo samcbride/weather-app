@@ -1,0 +1,8 @@
+.forecast-details {
+  text-align: center;
+  padding: 2em;
+}
+
+.forecast-details__date {
+  font-size: 30px;
+}
